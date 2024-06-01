@@ -62,6 +62,12 @@ export interface RsdoctorWebpackPluginOptions<
    * @default false
    */
   innerClientPath?: string;
+
+  /**
+   * This client server port
+   * @default 3301
+   */
+  port?: number;
 }
 
 export interface RsdoctorMultiplePluginOptions<

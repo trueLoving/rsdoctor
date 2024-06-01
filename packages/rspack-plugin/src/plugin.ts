@@ -59,6 +59,7 @@ export class RsdoctorRspackPlugin<Rules extends Linter.ExtendRuleData[]>
         type: SDK.ToDataType.Normal,
         config: { disableTOSUpload: this.options.disableTOSUpload },
         innerClientPath: this.options.innerClientPath,
+        port: this.options.port,
       });
     this.outsideInstance = Boolean(this.options.sdkInstance);
     this.modulesGraph = new ModuleGraph();

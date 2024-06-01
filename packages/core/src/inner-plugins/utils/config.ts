@@ -28,6 +28,7 @@ export function normalizeUserConfig<Rules extends Linter.ExtendRuleData[]>(
     disableTOSUpload = false,
     innerClientPath = '',
     supports = { banner: false },
+    port = 3301,
   } = config;
 
   assert(linter && typeof linter === 'object');
@@ -36,6 +37,7 @@ export function normalizeUserConfig<Rules extends Linter.ExtendRuleData[]>(
     loaderInterceptorOptions && typeof loaderInterceptorOptions === 'object',
   );
   assert(typeof disableClientServer === 'boolean');
+  assert(typeof port === 'number');
 
   const _features: RsdoctorPluginOptionsNormalized['features'] = Array.isArray(
     features,
@@ -93,6 +95,7 @@ export function normalizeUserConfig<Rules extends Linter.ExtendRuleData[]>(
     disableTOSUpload,
     innerClientPath,
     supports,
+    port,
   };
 
   return res;
